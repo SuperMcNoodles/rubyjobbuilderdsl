@@ -1,0 +1,6 @@
+*.gem
+vendor/
+.bundle/
+tmp/
+*.sublime-workspace
+sample/*.xml

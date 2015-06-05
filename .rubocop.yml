@@ -1,0 +1,63 @@
+AllCops:
+  Exclude:
+    - 'vendor/**/*'
+
+Style/Encoding:
+  Enabled: false
+
+Style/Documentation:
+  Enabled: false
+
+Style/For:
+  Enabled: false
+
+Style/TrailingComma:
+  Enabled: false
+
+Style/HashSyntax:
+  Enabled: false
+
+Style/FileName:
+  Enabled: false
+
+Style/Next:
+  Enabled: false
+
+Style/TrivialAccessors:
+  Enabled: false
+
+Style/EndOfLine:
+  Enabled: false
+
+Style/UnlessElse:
+  Enabled: false
+
+Style/Lambda:
+  Enabled: false
+
+Style/Semicolon:
+  Enabled: false
+
+Metrics/LineLength:
+  Max: 150
+
+Metrics/MethodLength:
+  Enabled: false
+
+Metrics/ClassLength:
+  Enabled: false
+
+Metrics/CyclomaticComplexity:
+  Enabled: false
+
+Metrics/ParameterLists:
+  Enabled: false
+
+Metrics/PerceivedComplexity:
+  Enabled: false
+
+Lint/LiteralInCondition:
+  Enabled: false
+
+Lint/BlockAlignment:
+  Enabled: false
