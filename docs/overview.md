@@ -29,7 +29,7 @@ Step 2 - Run it
 
     $bundle exec ruby hello-world.rb
     Usage:
-    hello-world.rb [--yaml|--xml --output-dir=.|--deploy --config-file=localhost.ini]
+    hello-world.rb [--xml --output-dir=.|--deploy --config-file=localhost.ini]
 
 Step 3 - Create XML
 
