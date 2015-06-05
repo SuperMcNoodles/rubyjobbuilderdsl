@@ -220,14 +220,14 @@ Multiple: Override
 
 Example
 
-  builder.freestyle 'hello_world-build' do
-    postbuild do
-      send_email 'test@example.com' do
-        notify_every_unstable_build false
-        send_to_individuals true
+    builder.freestyle 'hello_world-build' do
+      postbuild do
+        send_email 'test@example.com' do
+          notify_every_unstable_build false
+          send_to_individuals true
+        end
       end
     end
-  en
 
 **shell**
 
