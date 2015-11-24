@@ -35,6 +35,7 @@ module JenkinsJob
       BuildStep::InjectEnv => lambda { |generator, model, xml_node| generator.generate_inject_env(model, xml_node) },
       BuildStep::Ant => lambda { |generator, model, xml_node| generator.generate_ant(model, xml_node) },
       BuildStep::Phase => lambda { |generator, model, xml_node| generator.generate_phase(model, xml_node) },
+      BuildStep::Xvfb => lambda { |generator, model, xml_node| generator.generate_xvfb(model, xml_node) },
       Postbuild::Postbuild => lambda { |generator, model, xml_node| generator.generate_postbuild(model, xml_node) },
       Postbuild::Archive => lambda { |generator, model, xml_node| generator.generate_archive(model, xml_node) },
       Postbuild::EmailPublisher => lambda { |generator, model, xml_node| generator.generate_email_publisher(model, xml_node) },
@@ -424,6 +425,19 @@ module JenkinsJob
             entry.value(model.password_)
           end
         end
+      end
+    end
+
+    def generate_xvfb(model, wrappers)
+      wrappers.tag!('org.jenkinsci.plugins.xvfb.XvfbBuildWrapper', :plugin => 'xvfb@1.0.16') do |xvfb|
+        xvfb.installationName(model.install_name_)
+        xvfb.screen(model.screen_)
+        xvfb.debug(model.debug_)
+        xvfb.timeout(model.timeout_)
+        xvfb.displayNameOffset(model.display_name_offset_)
+        xvfb.shutdownWithBuild(model.shutdown_with_build_)
+        xvfb.autoDisplayName(model.auto_display_name_)
+        xvfb.parallelBuild(model.parallel_build_)
       end
     end
 
