@@ -3,6 +3,7 @@ require_relative './buildstep/shell'
 require_relative './buildstep/copyartifact'
 require_relative './buildstep/inject_env'
 require_relative './buildstep/ant'
+require_relative './buildstep/xvfb'
 
 module JenkinsJob
   class FreeStyle < Common::Common
@@ -37,6 +38,13 @@ module JenkinsJob
       inject.instance_eval(&block) if block_given?
 
       @builders_ << inject
+    end
+
+    def xvfb(&block)
+      xvfb = Xvfb.new
+      xvfb.instance_eval(&block) if block_given?
+
+      @wrappers_['xvfb'] = xvfb
     end
 
     def ant(&block)
