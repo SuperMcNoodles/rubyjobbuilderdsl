@@ -1,7 +1,7 @@
 Gem::Specification.new do |s|
   s.name        = 'rubyjobbuilderdsl'
-  s.version     = '0.0.1'
-  s.date        = '2015-11-15'
+  s.version     = '0.0.2'
+  s.date        = '2015-11-25'
   s.summary     = 'Ruby Internal DSL for creating Jenkins jobs'
   s.description = 'Ruby Internal DSL for creating Jenkins jobs'
   s.authors     = ['Huy Le']
