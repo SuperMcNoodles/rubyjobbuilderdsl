@@ -14,6 +14,7 @@ require_relative 'postbuild/game_publisher'
 require_relative 'postbuild/script'
 require_relative 'postbuild/trigger'
 require_relative 'postbuild/groovy'
+require_relative 'postbuild/cucumber_json_publisher'
 require_relative 'buildstep/shell'
 
 # dsl methods for job builder
@@ -109,6 +110,12 @@ module JenkinsJob
         clover = CloverPhpPublisher.new
         clover.instance_eval(&block) if block
         @publishers_['clover-php'] = clover
+      end
+
+      def cucumber_json_publisher(&block)
+        cucumber = CucumberJsonPublisher.new
+        cucumber.instance_eval(&block) if block
+        @publishers_['cucumber'] = cucumber
       end
 
       def publish_javadoc(&block)

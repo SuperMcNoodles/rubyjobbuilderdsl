@@ -42,6 +42,7 @@ module JenkinsJob
       Postbuild::NUnitPublisher => lambda { |generator, model, xml_node| generator.generate_nunit_publisher(model, xml_node) },
       Postbuild::XUnitPublisher => lambda { |generator, model, xml_node| generator.generate_xunit_publisher(model, xml_node) },
       Postbuild::HtmlPublisher => lambda { |generator, model, xml_node| generator.generate_html_publisher(model, xml_node) },
+      Postbuild::CucumberJsonPublisher => lambda { |generator, model, xml_node| generator.generate_cucumber_publisher(model, xml_node) },
       Postbuild::LogParser => lambda { |generator, model, xml_node| generator.generate_logparser(model, xml_node) },
       Postbuild::PostbuildScript => lambda { |generator, model, xml_node| generator.generate_postbuild_script(model, xml_node) },
       Postbuild::PostbuildGroovy => lambda { |generator, model, xml_node| generator.generate_postbuild_groovy(model, xml_node) },
@@ -680,6 +681,14 @@ module JenkinsJob
       end
     end
 
+    def generate_cucumber_publisher(model, publishers)
+      publishers.tag!(
+        'org.jenkinsci.plugins.cucumber.jsontestsupport.CucumberTestResultArchiver',
+        :plugin => 'cucumber-testresult-plugin@0.8.2') do |cucumber|
+        cucumber.testResults(model.test_results_)
+        cucumber.ignoreBadSteps(model.ignore_bad_tests_)
+      end
+    end
     def generate_logparser(model, publishers)
       publishers.tag!('hudson.plugins.logparser.LogParserPublisher') do |logparser|
         logparser.unstableOnWarning(model.unstable_on_warning_)
