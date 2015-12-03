@@ -64,7 +64,7 @@ Step 4 - Upload the created job to your Jenkins server
     user=jenkins-jobs
     password=7bb352e4f3da683c17247f3abf88f47c
 
-    sh-3.1$ bundle exec ruby hello_world.rb --deploy ----config-file=localhost.ini
+    sh-3.1$ bundle exec ruby hello-world.rb --deploy ----config-file=localhost.ini
     deploying hello-world
 
 ## References
