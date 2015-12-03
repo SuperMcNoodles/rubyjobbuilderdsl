@@ -34,7 +34,7 @@ Step 2 - Run it
 Step 3 - Create XML
 
 
-    sh-3.1$ bundle exec ruby hello_world.rb --xml --output-dir=.
+    sh-3.1$ bundle exec ruby hello-world.rb --xml --output-dir=.
     creating hello-world
     sh-3.1$ cat hello-world.xml
     <project>
