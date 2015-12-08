@@ -689,6 +689,7 @@ module JenkinsJob
         cucumber.ignoreBadSteps(model.ignore_bad_tests_)
       end
     end
+
     def generate_logparser(model, publishers)
       publishers.tag!('hudson.plugins.logparser.LogParserPublisher') do |logparser|
         logparser.unstableOnWarning(model.unstable_on_warning_)
