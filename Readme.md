@@ -26,7 +26,10 @@ At Wonga we used this to create many 100's if not 1000's of jobs in numerous jen
 # How does Rubyjobbuilderdsl work?
 
 if you look at any job in jenkins and add /config.xml to the url you will see the raw xml that defines the job.
-rubyjobbuilderdsl works with models and xml generators.
+
+rubyjobbuilderdsl works with models and xml generators to generate this xml.
+
+If you post this xml to the jenkins api it lets you create and modify the jobs giving you control over your jobs.
 
 Each jenkins feature/addin has a section in this xml.
 rubyjobbuilderdsl has a model for each addin that we have used so far (more can be added as and when required)
