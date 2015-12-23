@@ -52,3 +52,9 @@ NOTE: if you want to add new features/add ins to rubyjobbuilderdsl you will need
 # Is there a simple example to get me started?
 
 * [Overview](docs/overview.md)
+
+# References
+
+* http://ci.openstack.org/jenkins-job-builder/
+* https://github.com/jenkinsci/jenkins.rb
+* https://github.com/jenkinsci/job-dsl-plugin/wiki/Job-DSL-Commands
