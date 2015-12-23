@@ -51,4 +51,4 @@ NOTE: if you want to add new features/add ins to rubyjobbuilderdsl you will need
 
 # Is there a simple example to get me started?
 
-* [Common features](docs/overview.md)
+* [Overview](docs/overview.md)
