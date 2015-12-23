@@ -37,11 +37,11 @@ NOTE: if you want to add new features/add ins to rubyjobbuilderdsl you will need
 
 # Index of rubyjobbuilderdsl functionality
 
-[Common features](docs/common.md)
-[flow based build jobs](docs/flow.md)
-[freestyle build jobs](docs/freestyle.md)
-[gerrit based build jobs](docs/gerrit.md)
-[git based build jobs](docs/git.md)
-[multi jobs - a job type that lets you link many jobs together](docs/multi.md)
-[postbuild functionality](docs/postbuild.md)
-[jenkins views](docs/view.md)
+* [Common features](docs/common.md)
+* [flow based build jobs](docs/flow.md)
+* [freestyle build jobs](docs/freestyle.md)
+* [gerrit based build jobs](docs/gerrit.md)
+* [git based build jobs](docs/git.md)
+* [multi jobs - a job type that lets you link many jobs together](docs/multi.md)
+* [postbuild functionality](docs/postbuild.md)
+* [jenkins views](docs/view.md)
