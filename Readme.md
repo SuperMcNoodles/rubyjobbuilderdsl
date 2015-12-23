@@ -1,6 +1,7 @@
 # Introduction
 
 The rubyjobbuilderdsl project lets you treat the configuration of your jenkins server jobs as software in its own right.
+
 You can store the configuration of your jenkins server in git so you can restore it anytime you like.
 
 In our experience continuous integration projects consists of the following kinds of things:
