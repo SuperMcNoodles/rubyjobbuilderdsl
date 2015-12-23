@@ -5,13 +5,13 @@ You can store the configuration of your jenkins server in git so you can restore
 
 In our experience continuous integration projects consists of the following kinds of things:
 
-software build
-software test
-software deploy
+* software build
+* software test
+* software deploy
 
 If you have well structured code the following will happen:
 
-1. all of the software builds will follow the same templates.
+1. all of the software build jobs will follow the same templates
 2. all of the software test jobs will be the same but specify a different group of tests
 3. all of the software deploys will be the same but specify a different target
 
@@ -37,13 +37,11 @@ NOTE: if you want to add new features/add ins to rubyjobbuilderdsl you will need
 
 # Index of rubyjobbuilderdsl functionality
 
-[a relative link](docs/common.md)
-[a relative link](docs/flow.md)
-[a relative link](docs/freestyle.md)
-[a relative link](docs/gerrit.md)
-[a relative link](docs/git.md)
-[a relative link](docs/index.md)
-[a relative link](docs/multi.md)
-[a relative link](docs/overview.md)
-[a relative link](docs/postbuild.md)
-[a relative link](docs/view.md)
+[Common features](docs/common.md)
+[flow based build jobs](docs/flow.md)
+[freestyle build jobs](docs/freestyle.md)
+[gerrit based build jobs](docs/gerrit.md)
+[git based build jobs](docs/git.md)
+[multi jobs - a job type that lets you link many jobs together](docs/multi.md)
+[postbuild functionality](docs/postbuild.md)
+[jenkins views](docs/view.md)
