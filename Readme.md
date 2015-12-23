@@ -48,3 +48,7 @@ NOTE: if you want to add new features/add ins to rubyjobbuilderdsl you will need
 * [multi jobs - a job type that lets you link many jobs together](docs/multi.md)
 * [postbuild functionality](docs/postbuild.md)
 * [jenkins views](docs/view.md)
+
+# Is there a simple example to get me started?
+
+* [Common features](docs/overview.md)
